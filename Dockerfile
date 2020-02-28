@@ -4,4 +4,4 @@ RUN pip install boto3
 
 COPY entrypoint.py .
 
-ENTRYPOINT [ "entrypoint.py" ]
+ENTRYPOINT [ "/entrypoint.py" ]
