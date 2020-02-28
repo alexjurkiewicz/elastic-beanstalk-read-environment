@@ -1,0 +1,31 @@
+name: Read Elastic Beanstalk Environment Data
+author: Alex Jurkiewicz
+description: Read the status of an AWS Elastic Beanstalk Environment
+inputs:
+  application_name:
+    description: Application to search for the environment
+    required: false
+    default: ""
+  environment_name:
+    description: Environment name to search for
+    required: false
+    default: ""
+  environment_id:
+    description: Environment ID to load (eg `e-abcd1234yz`)
+    required: false
+    default: ""
+outputs:
+  name:
+    description: Environment name
+  id:
+    description: Environment ID (eg `e-abcd1234yz`)
+  application:
+    description: Application the environment exists in
+  version:
+    description: Currently deployed application version label
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  color: green
+  icon: codesandbox
